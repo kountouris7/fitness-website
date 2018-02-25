@@ -12,6 +12,25 @@
     </div>
 </div>
 
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+
+
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+
+                        </div>
+                    </div>
+    </div>
+</div>
+
+
+
 <div class="row mb-2">
     <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
