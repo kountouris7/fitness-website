@@ -9,6 +9,8 @@ Route::get('/personaltraining', 'ViewsController@personal');
 
 Route::get('/gallery', 'ViewsController@gallery');
 
+Route::get('/booklesson', 'BookLessonController@booklesson');
+
 
 
 Route::get('/subscribe', 'RegistrationController@subscribe')->name('subscribe');
