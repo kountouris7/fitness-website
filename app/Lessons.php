@@ -8,7 +8,7 @@ class Lessons extends Model
 {
     public function session()
     {
-        return $this->hasMany(session::class);
+        return $this->hasMany(Session::class);
     }
 
 

@@ -20,6 +20,8 @@
                 </a>
 
             </h1>
+        </div>
+    </div>
 
 
 
@@ -27,5 +29,4 @@
 
 
 
-    @endsection;
-
+    @endsection

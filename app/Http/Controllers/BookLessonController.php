@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Lessons;
+use App\Session;
+use App\User;
 use Illuminate\Http\Request;
 
 
@@ -14,4 +16,6 @@ class BookLessonController extends Controller
         return view ('booklesson', compact('lessons'));
 
     }
+
+
 }
