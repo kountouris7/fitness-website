@@ -7,25 +7,39 @@
         @foreach ($lessons as $lesson)
 
 
-    <div class="blog-post">
+    <div class="book-lesson">
 
         <div class="col-sm-8 blog-main">
 
-            <h1 class="blog-post-title">
+            <h1 class="book-lesson-title">
+
+
+
+
 
                 <a href="/booklesson/{{$lesson->id}}">
 
-                    {{$lesson->name}}
+                    <form method="POST" action="/booklesson/2">
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-primary">{{$lesson->name}}</button>
+
+                        </div>
+
+
+                    </form>
 
                 </a>
 
+
+
             </h1>
+
+
         </div>
     </div>
 
-
-
-    @endforeach
+        @endforeach
 
 
 

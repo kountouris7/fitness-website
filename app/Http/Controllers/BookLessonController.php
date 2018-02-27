@@ -18,4 +18,21 @@ class BookLessonController extends Controller
     }
 
 
+
+    public function store()
+    {
+        Session::create([
+            'user_id'   => request('user_id'),
+            'session_id'    => request('session_id'),
+            //'user_id' => auth()->id()
+        ]);
+
+        //Then redirect to homepage
+
+        return redirect('/');
+    }
+
+
+
+
 }

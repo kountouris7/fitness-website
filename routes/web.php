@@ -11,6 +11,8 @@ Route::get('/gallery', 'ViewsController@gallery');
 
 Route::get('/booklesson', 'BookLessonController@booklesson');
 
+Route::post('/booklesson/2', 'BookLessonController@store');
+
 Route::get('/subscribe', 'RegistrationController@subscribe')->name('subscribe');
 
 Route::post('/subscribe', 'RegistrationController@store');
