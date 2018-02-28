@@ -8,7 +8,7 @@ class Session extends Model
 {
     public function user()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'session_user');
     }
 
     public function lesson()
@@ -16,3 +16,5 @@ class Session extends Model
         return $this->belongsToMany(Lessons::class);
     }
 }
+
+

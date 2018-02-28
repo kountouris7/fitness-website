@@ -16,7 +16,8 @@ class CreateSessionsTable extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('lesson_id');
-            $table->integer('max capacity');
+            $table->dateTime('date_time_stamps');
+            $table->integer('max_capacity');
             $table->timestamps();
         });
     }

@@ -6,6 +6,7 @@ use App\Lessons;
 use App\Session;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class BookLessonController extends Controller
@@ -19,17 +20,14 @@ class BookLessonController extends Controller
 
 
 
-    public function store()
+    public function store(Request $request)
     {
-        Session::create([
-            'user_id'   => request('user_id'),
-            'session_id'    => request('session_id'),
-            //'user_id' => auth()->id()
-        ]);
+        $user = Auth::user();
 
-        //Then redirect to homepage
+        $user->sessions()
+            ->attach(request('session_id'));
 
-        return redirect('/');
+        return redirect()->home();
     }
 
 

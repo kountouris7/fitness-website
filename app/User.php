@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -27,8 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function session()
+    public function sessions()
     {
-        return $this->belongsToMany(session::class);
+        return $this->belongsToMany(Session::class, 'session_user');
     }
 }

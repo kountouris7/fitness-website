@@ -11,33 +11,30 @@
 
         <div class="col-sm-8 blog-main">
 
-            <h1 class="book-lesson-title">
+            <div class="book-lesson-title">
 
+                <h3>{{$lesson->name}} starting at {{ Carbon\Carbon::parse($lesson->date) }}</h3>
 
+                <form method="POST" action="{{route('booklesson')}}">
+                    {{csrf_field()}}
 
-
-
-                <a href="/booklesson/{{$lesson->id}}">
-
-                    <form method="POST" action="/booklesson/2">
                         <div class="form-group">
 
-                            <button type="submit" class="btn btn-primary">{{$lesson->name}}</button>
+                            <input type="hidden" name="session_id" value="{{$lesson->id}}">
+
+                            <button type="submit" class="btn btn-primary">book now</button>
 
                         </div>
 
 
+
                     </form>
 
-                </a>
-
-
-
-            </h1>
-
-
-        </div>
+            </div>
     </div>
+    </div>
+
+
 
         @endforeach
 
