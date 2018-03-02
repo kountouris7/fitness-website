@@ -29,6 +29,8 @@
 
     <div class="row">
 
+     @include('layouts.succes')
+
         @yield('content')
 
     </div>

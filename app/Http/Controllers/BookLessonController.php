@@ -22,13 +22,34 @@ class BookLessonController extends Controller
 
     public function store(Request $request)
     {
+       ////if (Session::whereUserId(Auth::user())->get()) {
+
+       //    session()->flash('notification', [
+       //        'title'   => 'Error!',
+       //        'message' => 'You\'ve already submitted this weeks timesheet',
+       //        'type'    => 'info',
+       //        'icon'    => 'fa fa-exclamation-circle'
+       //    ]);
+
+       //    return redirect()->home();
+       //}
+       //else{
+
         $user = Auth::user();
 
         $user->sessions()
-            ->attach(request('session_id'));
+                     ->attach(request('session_id'));
 
-        return redirect()->home();
-    }
+                session()->flash('notif', 'Booked Success');
+
+                return redirect()->route('booklesson');
+
+            }
+       //}
+
+
+
+
 
 
 
